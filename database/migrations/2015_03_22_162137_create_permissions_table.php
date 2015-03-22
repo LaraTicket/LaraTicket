@@ -16,6 +16,12 @@ class CreatePermissionsTable extends Migration {
 		{
 			$table->increments('id');
 
+            $table->integer('role_id')
+                ->unsigned();
+            $table->foreign('role_id')
+                ->references('id')
+                ->on('roles');
+
             $table->string('node');
             $table->string('description');
 

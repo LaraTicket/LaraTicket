@@ -14,6 +14,7 @@ class AppServiceProvider extends ServiceProvider {
         //
     }
 
+
     /**
      * Register any application services.
      *
@@ -25,15 +26,13 @@ class AppServiceProvider extends ServiceProvider {
      */
     public function register()
     {
-        $this->app->bind(
-            'Illuminate\Contracts\Auth\Registrar',
-            'LaraTicket\Services\Registrar'
-        );
+        $this->app->bind('Illuminate\Contracts\Auth\Registrar', 'LaraTicket\Services\Registrar');
 
-    if ($this->app->environment() == 'local') {
-      $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
-      $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
-    }
+        if ( $this->app->environment() == 'local' )
+        {
+            $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
+            $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
+        }
     }
 
 }

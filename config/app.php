@@ -13,8 +13,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG'),
-
+    'debug'           => env('APP_DEBUG'),
     /*
     |--------------------------------------------------------------------------
     | Application URL
@@ -26,8 +25,7 @@ return [
     |
     */
 
-    'url' => 'http://localhost',
-
+    'url'             => 'http://localhost',
     /*
     |--------------------------------------------------------------------------
     | Application Timezone
@@ -39,8 +37,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
-
+    'timezone'        => 'UTC',
     /*
     |--------------------------------------------------------------------------
     | Application Locale Configuration
@@ -52,8 +49,7 @@ return [
     |
     */
 
-    'locale' => 'en',
-
+    'locale'          => 'en',
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -66,7 +62,6 @@ return [
     */
 
     'fallback_locale' => 'en',
-
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -78,10 +73,8 @@ return [
     |
     */
 
-    'key' => env('APP_KEY', 'SomeRandomString'),
-
-    'cipher' => MCRYPT_RIJNDAEL_128,
-
+    'key'             => env('APP_KEY', 'SomeRandomString'),
+    'cipher'          => MCRYPT_RIJNDAEL_128,
     /*
     |--------------------------------------------------------------------------
     | Logging Configuration
@@ -95,8 +88,7 @@ return [
     |
     */
 
-    'log' => 'daily',
-
+    'log'             => 'daily',
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -108,7 +100,7 @@ return [
     |
     */
 
-    'providers' => [
+    'providers'       => [
 
         /*
          * Laravel Framework Service Providers...
@@ -135,7 +127,6 @@ return [
         'Illuminate\Translation\TranslationServiceProvider',
         'Illuminate\Validation\ValidationServiceProvider',
         'Illuminate\View\ViewServiceProvider',
-
         /*
          * Application Service Providers...
          */
@@ -144,13 +135,12 @@ return [
         'LaraTicket\Providers\ConfigServiceProvider',
         'LaraTicket\Providers\EventServiceProvider',
         'LaraTicket\Providers\RouteServiceProvider',
-
-    /*
-     * Third Party Service Providers...
-     */
-    'Laracasts\Flash\FlashServiceProvider',
+        'LaraTicket\Providers\PermissionServiceProvider',
+        /*
+         * Third Party Service Providers...
+         */
+        'Laracasts\Flash\FlashServiceProvider',
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Class Aliases
@@ -162,7 +152,7 @@ return [
     |
     */
 
-    'aliases' => [
+    'aliases'         => [
 
         'App'       => 'Illuminate\Support\Facades\App',
         'Artisan'   => 'Illuminate\Support\Facades\Artisan',
