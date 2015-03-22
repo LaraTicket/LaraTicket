@@ -3,7 +3,8 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTicketsTable extends Migration {
+class CreateTicketsTable extends Migration
+{
 
     /**
      * Run the migrations.
@@ -12,9 +13,26 @@ class CreateTicketsTable extends Migration {
      */
     public function up()
     {
-        Schema::create('tickets', function(Blueprint $table)
-        {
+        Schema::create('tickets', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('user_id');
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users');
+
+            $table->integer('status_id');
+            $table->foreign('status_id')
+                ->references('id')
+                ->on('ticket_statuses');
+
+            $table->integer('assignee_id');
+            $table->foreign('assignee_id')
+                ->references('id')
+                ->on('users');
+
+            $table->text('content');
+
             $table->timestamps();
         });
     }

@@ -1,0 +1,33 @@
+{
+  "name": "LaraTicket",
+  "version": "0.1",
+  "homepage": "https://github.com/LaraTicket/LaraTicket",
+  "description": "LaraTicket - open source Helpdesk/Support system",
+  "keywords": [
+    "laravel",
+    "support",
+    "ticket",
+    "system",
+    "helpdesk"
+  ],
+  "authors": [
+    "Igor Randjelovic"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.4",
+    "summernote": "~0.6.2",
+    "fastclick": "~1.0.6",
+    "pace": "~1.0.2",
+    "jquery": "~2.1.3",
+    "font-awesome": "~4.3.0",
+    "ionicons": "~2.0.1"
+  }
+}

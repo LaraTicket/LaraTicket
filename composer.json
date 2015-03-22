@@ -15,7 +15,8 @@
         "phpspec/phpspec": "~2.1",
         "benconstable/phpspec-laravel": "~2.0",
 		"laracasts/generators": "~1.1",
-        "barryvdh/laravel-ide-helper": "2.0.3"
+        "barryvdh/laravel-ide-helper": "2.0.3",
+        "behat/behat": "3.*"
 	},
 	"autoload": {
 		"classmap": [

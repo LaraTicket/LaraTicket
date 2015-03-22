@@ -25,7 +25,7 @@ elixir.extend("clear", function() {
 
 elixir(function(mix) {
     mix.less('app.less');
-
-    mix.copy('resources/assets/js', 'public/js');
     mix.version('css/app.css');
+
+    mix.copy('resources/js', 'public/js');
 });

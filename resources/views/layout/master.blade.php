@@ -27,9 +27,11 @@
 
   </div>
 
-<script src="js/vendor/jQuery/jQuery-2.1.3.min.js"></script>
-<script src="js/vendor/bootstrap/bootstrap.min.js" type="text/javascript"></script>
+<script src="vendor/jquery/dist/jquery.min.js"></script>
+<script src="vendor/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
 <script src="js/app.js" type="text/javascript"></script>
+
+@yield('scripts')
 
 </body>
 </html>
