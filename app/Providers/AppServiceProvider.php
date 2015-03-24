@@ -28,7 +28,7 @@ class AppServiceProvider extends ServiceProvider {
     {
         $this->app->bind('Illuminate\Contracts\Auth\Registrar', 'LaraTicket\Services\Registrar');
 
-        if ( $this->app->environment() == 'local' )
+        if ($this->app->environment() == 'local')
         {
             $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
             $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');

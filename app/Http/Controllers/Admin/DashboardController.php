@@ -1,34 +1,46 @@
 <?php namespace LaraTicket\Http\Controllers\Admin;
 
+use Illuminate\Support\Facades\Hash;
 use LaraTicket\Contracts\Permissions\PermissionProvider;
 use LaraTicket\Http\Requests;
 use LaraTicket\Http\Controllers\Controller;
 
 use Illuminate\Http\Request;
+use LaraTicket\User;
 
 class DashboardController extends Controller {
 
-    /**
-     * @var PermissionProvider
-     */
-    private $permission;
+  /**
+   * @var PermissionProvider
+   */
+  private $permission;
 
 
-    function __construct(PermissionProvider $permission)
+  function __construct(PermissionProvider $permission)
+  {
+    $this->permission = $permission;
+  }
+
+
+  /**
+   * Display the dashboard.
+   *
+   * @return Response
+   */
+  public function index()
+  {
+    $user = User::first();
+    if ( ! $user)
     {
-        $this->permission = $permission;
+      $user = User::create(
+        [
+          'email'    => 'test@local',
+          'password' => bcrypt('test')
+        ]);
     }
+    $this->permission->can($user, 'test');
 
-
-    /**
-     * Display the dashboard.
-     *
-     * @return Response
-     */
-    public function index()
-    {
-        $this->permission->check('test');
-        return view('admin.dashboard');
-    }
+    return view('admin.dashboard');
+  }
 
 }

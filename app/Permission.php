@@ -6,7 +6,7 @@ class Permission extends Model {
 
     /**
      * Role which this Permission belongs to.
-     * 
+     *
      * @return \Illuminate\Database\Eloquent\Relations\HasOne
      */
     public function role()
