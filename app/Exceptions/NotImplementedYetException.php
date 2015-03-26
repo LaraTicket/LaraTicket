@@ -2,9 +2,15 @@
 
 class NotImplementedYetException extends \Exception {
 
-    public function __construct($feature = "", $code = 501, \Exception $previous = null)
+    /**
+     * Construct a new instance of the exception
+     *
+     * @param string     $feature
+     * @param \Exception $previous
+     */
+    public function __construct($feature, \Exception $previous = null)
     {
-        parent::__construct("{$feature} has not been implemented yet!", $code, $previous);
+        parent::__construct("{$feature} has not been implemented yet!", 501, $previous);
     }
 
 }

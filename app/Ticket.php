@@ -7,7 +7,6 @@ class Ticket extends Model {
 
     use RevisionableTrait;
 
-
     /**
      * Status of this ticket
      *

@@ -12,12 +12,12 @@ trait HasRoles {
      */
     public function getRoles()
     {
-        if ( ! method_exists($this, 'roles'))
+        if ( ! method_exists($this, 'roles') )
         {
             throw new NotCompatibleClassException('roles');
         }
 
-        return $this->roles()->all();
+        return $this->roles()->get();
     }
 
 }

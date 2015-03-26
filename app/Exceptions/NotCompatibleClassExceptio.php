@@ -2,8 +2,14 @@
 
 class NotCompatibleClassException extends \Exception {
 
-    public function __construct($method)
+    /**
+     * Construct a new instance of the exception
+     *
+     * @param string     $method
+     * @param \Exception $previous
+     */
+    public function __construct($method, \Exception $previous = null)
     {
-        parent::__construct("Class must implement {$method} method!");
+        parent::__construct("Class must implement {$method} method!", 0, $previous);
     }
 }

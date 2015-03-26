@@ -12,22 +12,21 @@ use LaraTicket\Permissions\HasRoles;
 
 class User extends Model implements AuthenticatableContract, CanResetPasswordContract, HasPermissionsContract, HasRolesContract {
 
-    use Authenticatable, CanResetPassword, HasPermissions, HasRoles;
+    use Authenticatable, CanResetPassword, HasRoles, HasPermissions;
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = [ 'name', 'email', 'password' ];
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];
-
+    protected $hidden = [ 'password', 'remember_token' ];
 
     /**
      * Tickets created by this user
@@ -47,24 +46,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function roles()
     {
         return $this->belongsToMany(Role::class);
-    }
-
-    /**
-     * Permissions of this user
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\HasManyThrough
-     */
-    public function permissions()
-    {
-        $perms = [];
-        foreach ($this->roles as $role)
-        {
-            $perms[] = $role->permissions();
-        }
-        dd($perms);
-
-        return $perms;
-        //return $this->hasManyThrough(Permission::class, Role::class);
     }
 
 }

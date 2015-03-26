@@ -7,11 +7,11 @@ class Permission extends Model {
     /**
      * Role which this Permission belongs to.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function role()
     {
-        return $this->belongsTo(Role::class);
+        return $this->belongsToMany(Role::class);
     }
 
 }

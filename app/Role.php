@@ -11,11 +11,11 @@ class Role extends Model implements HasPermissionsContract {
     /**
      * Permissions that belong to this role
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
      */
     public function permissions()
     {
-        return $this->hasMany(Permission::class);
+        return $this->belongsToMany(Permission::class);
     }
 
 }

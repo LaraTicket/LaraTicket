@@ -10,37 +10,35 @@ use LaraTicket\User;
 
 class DashboardController extends Controller {
 
-  /**
-   * @var PermissionProvider
-   */
-  private $permission;
+    /**
+     * @var PermissionProvider
+     */
+    private $permission;
 
-
-  function __construct(PermissionProvider $permission)
-  {
-    $this->permission = $permission;
-  }
-
-
-  /**
-   * Display the dashboard.
-   *
-   * @return Response
-   */
-  public function index()
-  {
-    $user = User::first();
-    if ( ! $user)
+    function __construct(PermissionProvider $permission)
     {
-      $user = User::create(
-        [
-          'email'    => 'test@local',
-          'password' => bcrypt('test')
-        ]);
+        $this->permission = $permission;
     }
-    $this->permission->can($user, 'test');
 
-    return view('admin.dashboard');
-  }
+    /**
+     * Display the dashboard.
+     *
+     * @return Response
+     */
+    public function index()
+    {
+        $user = User::first();
+        if ( ! $user )
+        {
+            $user = User::create([
+                'email'    => 'test@local',
+                'password' => bcrypt('test')
+            ]);
+        }
+        \Auth::login($user);
+        $this->permission->check('dashboard.access');
+
+        return view('admin.dashboard');
+    }
 
 }

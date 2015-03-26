@@ -34,16 +34,12 @@ class Handler extends ExceptionHandler {
      * Render an exception into an HTTP response.
      *
      * @param  \Illuminate\Http\Request $request
-     * @param  \Exception $e
+     * @param  \Exception               $e
      *
      * @return \Illuminate\Http\Response
      */
     public function render($request, Exception $e)
     {
-        if ($e instanceof NotImplementedYetException)
-        {
-            abort(501);
-        }
 
         return parent::render($request, $e);
     }
