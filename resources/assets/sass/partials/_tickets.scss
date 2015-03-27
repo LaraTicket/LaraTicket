@@ -1,0 +1,23 @@
+#tickets {
+    border-spacing: 0;
+    
+    tr td {
+        font-size: .8rem;
+        font-size: .9rem;
+    }
+    
+    .ticket {
+        .title {
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+    
+    .submission {
+        word-wrap: break-word;
+        
+        time {
+            color: #888;
+        }
+    }
+}

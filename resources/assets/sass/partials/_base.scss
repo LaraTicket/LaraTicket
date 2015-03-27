@@ -1,0 +1,70 @@
+@import "modules/all";
+
+html {
+    height: auto;
+}
+
+body {
+    background: $main-background-color;
+    overflow-y: scroll;
+}
+
+.full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+#main-wrapper {
+    display: table;
+    width: 100%;
+}
+
+#main-container {
+    position: relative;
+    left: $sidebar-width;
+    display: table;
+    @include calc(width, '100% - #{$sidebar-width}');
+    
+    main {
+        @include calc(height, '100% - #{$topbar-height}');
+    }
+}
+
+footer[role="main"]{
+    display: table-row;
+    height: 1px;
+}
+
+#copyright {
+    color: #aaa;
+    text-align: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+/* mobile styles */
+@media only screen {}
+
+/* max-width 640px, mobile-only styles */
+@media only screen and (max-width: 40em) {}
+
+/* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {}
+
+/* min-width 641px and max-width 1024px */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
+
+/* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {}
+
+/* min-width 1025px and max-width 1440px */
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {}
+
+/* min-width 1441px, xlarge screens */
+@media only screen and (min-width: 90.063em) {}
+
+/* min-width 1441px and max-width 1920px */
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {}
+
+/* min-width 1921px, xxlarge screens */
+@media only screen and (min-width: 120.063em) {}

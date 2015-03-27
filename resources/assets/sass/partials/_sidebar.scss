@@ -1,0 +1,62 @@
+#sidebar {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    background: $sidebar-background-color;
+    color: $sidebar-color;
+    width: $sidebar-width;
+    min-height: 100%;
+    padding-top: $topbar-height;
+    
+    .new-ticket-container {
+        background: $sidebar-background-color-secondary;
+        padding: 12px 14px;
+        
+        .button {
+            display: block;
+            background: $green;
+            color: #eee;
+            font-size: .8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 12px;
+            
+            &:hover {
+                background: $green-secondary;
+            }
+        }
+    }
+    
+    h5 {
+        color: $sidebar-color-secondary;
+        font-size: .75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 16px 0 8px 0;
+        padding: 0 24px;
+    }
+    
+    a {
+        display: block;
+        color: $sidebar-color;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        
+        li a {
+            font-size: .875rem;
+            padding: 12px 24px;
+            @include darken-on-hover(.1);
+        }
+    }
+    
+    .menu-icon {
+        vertical-align: 1px;
+        font-size: .8rem;
+        min-width: 16px;
+        margin-right: 12px;
+    }
+}

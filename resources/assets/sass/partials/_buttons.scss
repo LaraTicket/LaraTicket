@@ -1,0 +1,13 @@
+button,
+.button {
+    @include transition(.1s);
+    
+    &.secondary {
+        background: #fff;
+        
+        &:hover,
+        &:focus {
+            background: #eee;
+        }
+    }
+}

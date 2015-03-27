@@ -1,0 +1,42 @@
+#topbar {
+    position: relative;
+    z-index: 2000;
+    background: $topbar-background-color;
+    
+    #app-logo {
+        display: block;
+        background: $topbar-background-color-secondary;
+        font-size: $logo-font-size;
+        color: $topbar-color;
+        text-align: $logo-text-align;
+        width: $sidebar-width;
+        height: $topbar-height;
+        padding: 6px;
+        
+        @include darken-on-hover();
+    }
+    
+    #user-notifications {
+        float: left;
+        height: $topbar-height;
+    }
+    
+    #user {
+        float: left;
+        height: $topbar-height;
+        
+        .dropdown-icon {
+            // display: none;
+            margin-left: 4px;
+        }
+    }
+    
+    a {
+        display: inline-block;
+        color: $topbar-color;
+        height: $topbar-height;
+        padding: 12px;
+        
+        @include darken-on-hover();
+    }
+}
