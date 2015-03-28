@@ -84,7 +84,7 @@
                     </a>
                 </td>
                 <td class="submission">
-                    <time>25 Mar 18:30</time><br />
+                    <time datetime="2015-03-25T18:30Z">25 Mar 18:30</time><br />
                     By <a href="#">customer366493@example.com</a>
                 </td>
             </tr>

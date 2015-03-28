@@ -49,7 +49,7 @@
                     >{{ trans('tickets.new') }}</a>
                 </div>
                 
-                <nav role="main">
+                <nav class="main">
                     <h5>{{ trans('nav.title') }}</h5>
                     
                     <ul>
@@ -131,7 +131,7 @@
                     </div>
                 </main>
                 
-                <footer role="main">
+                <footer class="main">
                     <div class="row full-width">
                         <div id="copyright" class="small-12 columns">
                             Copyright &copy; LaraTicket {{ date('Y') }}
