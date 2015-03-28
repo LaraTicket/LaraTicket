@@ -14,6 +14,6 @@ class CreateTicketCommandSpec extends ObjectBehavior {
 
   function it_handles_the_command()
   {
-    $this->handle()->shouldReturn(['a']);
+    
   }
 }

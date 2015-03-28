@@ -34,4 +34,12 @@ return [
         'secret' => '',
     ],
 
+    'imap' => [
+        'host'  => 'imap.something',
+        'username' => '',
+        'password' => '',
+        'port' => 993,
+        'flags' => ''
+    ],
+
 ];
