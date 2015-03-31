@@ -74,7 +74,7 @@
                         <li>
                             <a href="#">
                                 <i class="fa fa-bar-chart menu-icon"></i>
-                                {{ trans('graphs.title') }}
+                                {{ trans('statistics.title') }}
                             </a>
                         </li>
                         <li>

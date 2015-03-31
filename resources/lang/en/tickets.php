@@ -13,6 +13,7 @@ return [
     
     'title' => 'Tickets',
     'ticket' => 'Ticket',
+    'closed' => 'Closed Tickets',
     'assigned_to_me' => 'Assigned to me',
     'new' => 'New Ticket',
     'labels.title' => 'Labels',
