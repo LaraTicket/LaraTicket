@@ -36,7 +36,7 @@
     <table id="tickets" class="full-width">
         <tr>
             <th>{{ trans('tickets.ticket') }}</th>
-            <th>Comments</th>
+            <th></th>
             <th>Labels</th>
             <th>Submission</th>
         </tr>
