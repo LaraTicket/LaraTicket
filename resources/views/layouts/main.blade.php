@@ -135,7 +135,7 @@
                 <footer class="main">
                     <div class="row full-width">
                         <div id="copyright" class="small-12 columns">
-                            Copyright &copy; LaraTicket {{ date('Y') }}
+                            Copyright &copy; {{ config('app.name') }} {{ date('Y') }}
                         </div>
                     </div>
                 </footer>
