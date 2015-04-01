@@ -21,6 +21,7 @@
         <div id="main-wrapper">
             <div id="topbar" class="row full-width">
                 <a href="{{ route('dashboard') }}" id="app-logo" class="left">
+                    <i class="fa fa-ticket"></i>
                     {{ config('app.name') }}
                 </a>
                 
