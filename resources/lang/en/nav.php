@@ -12,4 +12,6 @@ return [
     */
     
     'title' => 'Navigate',
+    'back-to-dashboard' => 'Back to dashboard',
+    
 ];

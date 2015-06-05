@@ -20,18 +20,22 @@
     <body>
         <div id="main-wrapper">
             <div id="topbar" class="row full-width">
-                <a href="{{ route('dashboard') }}" id="app-logo" class="left">
+                <a href="{{ route('dashboard') }}"
+                   title="{{ trans('nav.back-to-dashboard') }}"
+                   id="app-logo"
+                   class="left"
+                >
                     <i class="fa fa-ticket"></i>
                     {{ config('app.name') }}
                 </a>
                 
                 <div class="right">
                     <div id="user-notifications">
-                        <a href="#" id="system-notifications">
+                        <a href="#" title="View system notifications" id="system-notifications">
                             <i class="fa fa-bell"></i>
                             <i class="fa fa-caret-down dropdown-icon"></i>
                         </a>
-                        <a href="#" id="mail-notifications">
+                        <a href="#" title="View mail notifications" id="mail-notifications">
                             <i class="fa fa-envelope"></i>
                             <i class="fa fa-caret-down dropdown-icon"></i>
                         </a>

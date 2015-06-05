@@ -16,12 +16,14 @@
                             <input type="text"
                                    name="search"
                                    class="search-input"
+                                   aria-label="Search keyword"
                                    placeholder="Search..."
                             />
                         </div>
                         
                         <div class="small-4 columns">
                             <button type="submit"
+                                    aria-label="search now"
                                     class="search-button secondary postfix"
                             >
                                 <i class="fa fa-search"></i>
@@ -35,8 +37,7 @@
     
     <table id="tickets" class="full-width">
         <tr>
-            <th>{{ trans('tickets.ticket') }}</th>
-            <th></th>
+            <th colspan="2">{{ trans('tickets.ticket') }}</th>
             <th>Labels</th>
             <th>Submission</th>
         </tr>
@@ -52,34 +53,34 @@
                     Assigned to: <a href="#">user@example.com</a>
                 </td>
                 <td class="comments">
-                    <a href="" class="comments">
+                    <a href="#" title="4 comments posted." class="comments">
                         <i class="fa fa-comments"></i>
                         4
                     </a>
                 </td>
                 <td class="labels">
-                    <a href="#">
+                    <a href="#" aria-label="Bug">
                         <span class="label turquoise-background">Bug</span>
                     </a>
-                    <a href="#">
+                    <a href="#" aria-label="Bug">
                         <span class="label green-background">Bug</span>
                     </a>
-                    <a href="#">
+                    <a href="#" aria-label="Bug">
                         <span class="label blue-background">Bug</span>
                     </a>
-                    <a href="#">
+                    <a href="#" aria-label="Bug">
                         <span class="label midnight-blue-background">Bug</span>
                     </a>
-                    <a href="#">
+                    <a href="#" aria-label="Bug">
                         <span class="label yellow-background">Bug</span>
                     </a>
-                    <a href="#">
+                    <a href="#" aria-label="Bug">
                         <span class="label orange-background">Bug</span>
                     </a>
-                    <a href="#">
+                    <a href="#" aria-label="Bug">
                         <span class="label red-background">Bug</span>
                     </a>
-                    <a href="#">
+                    <a href="#" aria-label="Bug">
                         <span class="label concrete-background">Bug</span>
                     </a>
                 </td>
