@@ -1,14 +1,14 @@
 #topbar {
     position: relative;
     z-index: 2000;
-    background: $topbar-background-color;
+    background: rgb(243, 156, 18);
     
     #app-logo {
         display: block;
-        background: $topbar-background-color-secondary;
-        font-size: $logo-font-size;
-        color: $topbar-color;
-        text-align: $logo-text-align;
+        background: rgb(224, 142, 11);
+        font-size: 1.4rem;
+        color: #fff;
+        text-align: center;
         width: $sidebar-width;
         height: $topbar-height;
         padding: 6px;
@@ -33,7 +33,7 @@
     
     a {
         display: inline-block;
-        color: $topbar-color;
+        color: #fff;
         height: $topbar-height;
         padding: 12px;
         

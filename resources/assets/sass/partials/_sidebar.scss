@@ -2,14 +2,14 @@
     position: absolute;
     top: 0;
     z-index: 1000;
-    background: $sidebar-background-color;
-    color: $sidebar-color;
+    background: #30363E;
+    color: #ddd;
     width: $sidebar-width;
     min-height: 100%;
     padding-top: $topbar-height;
     
     .new-ticket-container {
-        background: $sidebar-background-color-secondary;
+        background: #464650;
         padding: 12px 14px;
         
         .button {
@@ -29,7 +29,7 @@
     }
     
     h5 {
-        color: $sidebar-color-secondary;
+        color: #999;
         font-size: .75rem;
         font-weight: bold;
         text-transform: uppercase;
@@ -39,7 +39,7 @@
     
     a {
         display: block;
-        color: $sidebar-color;
+        color: #ddd;
     }
     
     ul {

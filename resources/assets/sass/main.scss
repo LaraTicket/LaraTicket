@@ -1,8 +1,83 @@
-@import "partials/base";
+@import "_functions";
+@import "_settings";
+
+@import "partials/topbar";
+@import "partials/sidebar";
+@import "partials/tickets";
+@import "partials/footer";
 
 @import "partials/colors";
+
+/*
+@import "partials/base";
+
 @import "partials/buttons";
 @import "partials/forms";
 @import "partials/topbar";
 @import "partials/sidebar";
 @import "partials/tickets";
+*/
+
+
+html {
+    height: auto;
+}
+
+body {
+    background: #eee;
+    overflow-y: scroll;
+}
+
+button,
+.button {
+    @include transition(background, .1s);
+    
+    &.secondary {
+        background: #fff;
+        
+        &:hover,
+        &:focus {
+            background: #eee;
+        }
+    }
+}
+
+form.search {
+    padding: 17px 0;
+    
+    .search-input {
+        margin: 0;
+        border-right: none;
+    }
+    
+    .search-button {
+        color: #666;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        border-color: #ccc;
+    }
+}
+
+
+.full-width {
+    width: 100%;
+    max-width: 100%;
+}
+
+#main-wrapper {
+    display: table;
+    width: 100%;
+}
+
+#main-container {
+    position: relative;
+    left: $sidebar-width;
+    display: table;
+    @include calc(width, '100% - #{$sidebar-width}');
+    
+    main {
+        @include calc(height, '100% - #{$topbar-height}');
+    }
+}
+
