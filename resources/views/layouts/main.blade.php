@@ -29,9 +29,11 @@
                     <div id="user-notifications">
                         <a href="#" id="system-notifications">
                             <i class="fa fa-bell"></i>
+                            <i class="fa fa-caret-down dropdown-icon"></i>
                         </a>
                         <a href="#" id="mail-notifications">
                             <i class="fa fa-envelope"></i>
+                            <i class="fa fa-caret-down dropdown-icon"></i>
                         </a>
                     </div>
                     
