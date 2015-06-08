@@ -1,0 +1,56 @@
+#topbar {
+    display: table-caption;
+    background: rgb(243, 156, 18);
+    
+    #app-logo {
+        display: block;
+        background: rgb(224, 142, 11);
+        font-size: 1.4rem;
+        color: #fff;
+        text-align: center;
+        width: $sidebar-width;
+        height: $topbar-height;
+        padding: 6px;
+        
+        @include darken-on-hover();
+    }
+    
+    #user-notifications {
+        float: left;
+        height: $topbar-height;
+    }
+    
+    #user {
+        float: left;
+        height: $topbar-height;
+        
+        .dropdown-icon {
+            // display: none;
+            margin-left: 4px;
+        }
+    }
+    
+    a {
+        display: inline-block;
+        color: #fff;
+        height: $topbar-height;
+        padding: 12px;
+        
+        @include darken-on-hover();
+    }
+}
+
+@media #{$small-up} {}
+@media #{$small-only} {}
+
+@media #{$medium-up} {}
+@media #{$medium-only} {}
+
+@media #{$large-up} {}
+@media #{$large-only} {}
+
+@media #{$xlarge-up} {}
+@media #{$xlarge-only} {}
+
+@media #{$xxlarge-up} {}
+@media #{$xxlarge-only} {}

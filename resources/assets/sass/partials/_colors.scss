@@ -1,0 +1,95 @@
+/*
+| Text colors
+*/
+.turquoise-color {
+    color: $turquoise;
+    @include darken-on-hover();
+}
+
+.green-color {
+    color: $green;
+    @include darken-on-hover();
+}
+
+.blue-color {
+    color: $blue;
+    @include darken-on-hover();
+}
+
+.midnight-blue-color {
+    color: $midnight-blue;
+    @include darken-on-hover();
+}
+
+.yellow-color {
+    color: $yellow;
+    @include darken-on-hover();
+}
+
+.orange-color {
+    color: $orange;
+    @include darken-on-hover();
+}
+
+.red-color {
+    color: $red;
+    @include darken-on-hover();
+}
+
+.silver-color {
+    color: $silver;
+    @include darken-on-hover();
+}
+
+.concrete-color {
+    color: $concrete;
+    @include darken-on-hover();
+}
+
+/*
+| Background colors
+*/
+.turquoise-background {
+    background: $turquoise;
+    @include darken-on-hover();
+}
+
+.green-background {
+    background: $green;
+    @include darken-on-hover();
+}
+
+.blue-background {
+    background: $blue;
+    @include darken-on-hover();
+}
+
+.midnight-blue-background {
+    background: $midnight-blue;
+    @include darken-on-hover();
+}
+
+.yellow-background {
+    background: $yellow;
+    @include darken-on-hover();
+}
+
+.orange-background {
+    background: $orange;
+    @include darken-on-hover();
+}
+
+.red-background {
+    background: $red;
+    @include darken-on-hover();
+}
+
+.silver-background {
+    background: $silver;
+    @include darken-on-hover();
+}
+
+.concrete-background {
+    background: $concrete;
+    @include darken-on-hover();
+}

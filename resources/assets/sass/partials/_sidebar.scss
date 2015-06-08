@@ -1,0 +1,75 @@
+#sidebar {
+    display: table-cell;
+    vertical-align: top;
+    background: #30363E;
+    color: #ddd;
+    width: $sidebar-width;
+    min-height: 100%;
+    
+    .new-ticket-container {
+        background: #464650;
+        padding: 12px 14px;
+        
+        .button {
+            display: block;
+            background: $green;
+            color: #eee;
+            font-size: .8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+            padding: 12px;
+            
+            &:hover {
+                background: $green-secondary;
+            }
+        }
+    }
+    
+    h5 {
+        color: #999;
+        font-size: .75rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        margin: 16px 0 8px 0;
+        padding: 0 24px;
+    }
+    
+    a {
+        display: block;
+        color: #ddd;
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        
+        li a {
+            font-size: .875rem;
+            padding: 12px 24px;
+            @include darken-on-hover(.1);
+        }
+    }
+    
+    .menu-icon {
+        vertical-align: 1px;
+        font-size: .8rem;
+        min-width: 16px;
+        margin-right: 12px;
+    }
+}
+
+@media #{$small-up} {}
+@media #{$small-only} {}
+
+@media #{$medium-up} {}
+@media #{$medium-only} {}
+
+@media #{$large-up} {}
+@media #{$large-only} {}
+
+@media #{$xlarge-up} {}
+@media #{$xlarge-only} {}
+
+@media #{$xxlarge-up} {}
+@media #{$xxlarge-only} {}

@@ -18,14 +18,12 @@ elixir.extend("clear", function() {
  |--------------------------------------------------------------------------
  |
  | Elixir provides a clean, fluent API for defining some basic Gulp tasks
- | for your Laravel application. By default, we are compiling the Less
- | file for our application, as well as publishing vendor resources.
+ | for your Laravel application.
  |
  */
+// elixir.config.sourcemaps = false;
 
 elixir(function(mix) {
-    mix.less('app.less');
-    mix.version('css/app.css');
-
-    mix.copy('resources/js', 'public/js');
+    mix.sass('main.scss');
+    mix.version('styles/main.css');
 });
