@@ -50,6 +50,11 @@ form.search {
     max-width: 100%;
 }
 
+.no-script-message {
+    background: darken($red, 5);
+    color: #fff;
+}
+
 #main-wrapper {
     display: table;
     width: 100%;

@@ -18,6 +18,16 @@
         <link rel="stylesheet" href="{{ asset('css/main.css') }}" />
     </head>
     <body>
+        <noscript>
+            <div class="no-script-message">
+                <div class="row full-width">
+                    <div class="small-12 columns">
+                        {{ config('app.name') }} works best with JavaScript enabled.
+                    </div>
+                </div>
+            </div>
+        </noscript>
+        
         <div id="main-wrapper">
             <div id="topbar" class="row full-width">
                 <a href="{{ route('dashboard') }}"
