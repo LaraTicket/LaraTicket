@@ -1,12 +1,10 @@
 #sidebar {
-    position: absolute;
-    top: 0;
-    z-index: 1000;
+    display: table-cell;
+    vertical-align: top;
     background: #30363E;
     color: #ddd;
     width: $sidebar-width;
     min-height: 100%;
-    padding-top: $topbar-height;
     
     .new-ticket-container {
         background: #464650;

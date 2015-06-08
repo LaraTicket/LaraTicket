@@ -8,10 +8,6 @@
 
 @import "partials/colors";
 
-html {
-    height: auto;
-}
-
 body {
     background: #eee;
     overflow-y: scroll;
@@ -57,13 +53,13 @@ form.search {
 #main-wrapper {
     display: table;
     width: 100%;
+    @include calc(height, '100% - #{$topbar-height}');
 }
 
 #main-container {
     position: relative;
-    left: $sidebar-width;
     display: table;
-    @include calc(width, '100% - #{$sidebar-width}');
+    width: 100%;
     
     main {
         @include calc(height, '100% - #{$topbar-height}');
