@@ -1,10 +1,13 @@
-<?php namespace LaraTicket;
+<?php
+
+namespace LaraTicket;
 
 use Illuminate\Database\Eloquent\Model;
 use LaraTicket\Contracts\Permissions\HasPermissions as HasPermissionsContract;
 use LaraTicket\Permissions\HasPermissions;
 
-class Role extends Model implements HasPermissionsContract {
+class Role extends Model implements HasPermissionsContract
+{
 
     use HasPermissions;
 
@@ -17,5 +20,4 @@ class Role extends Model implements HasPermissionsContract {
     {
         return $this->belongsToMany(Permission::class);
     }
-
 }

@@ -1,8 +1,11 @@
-<?php namespace LaraTicket;
+<?php
+
+namespace LaraTicket;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Permission extends Model {
+class Permission extends Model
+{
 
     /**
      * Role which this Permission belongs to.
@@ -13,5 +16,4 @@ class Permission extends Model {
     {
         return $this->belongsToMany(Role::class);
     }
-
 }

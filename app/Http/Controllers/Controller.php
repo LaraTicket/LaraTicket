@@ -1,11 +1,13 @@
-<?php namespace LaraTicket\Http\Controllers;
+<?php
 
-use Illuminate\Foundation\Bus\DispatchesCommands;
-use Illuminate\Routing\Controller as BaseController;
+namespace LaraTicket\Http\Controllers;
+
+use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
+use Illuminate\Routing\Controller as BaseController;
 
-abstract class Controller extends BaseController {
+abstract class Controller extends BaseController
+{
 
-    use DispatchesCommands, ValidatesRequests;
-
+    use DispatchesJobs, ValidatesRequests;
 }

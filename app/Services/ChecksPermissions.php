@@ -1,11 +1,14 @@
-<?php namespace LaraTicket\Services;
+<?php
+
+namespace LaraTicket\Services;
 
 use Illuminate\Auth\AuthManager;
 use LaraTicket\Contracts\Permissions\HasPermissions as HasPermissionsContract;
 use LaraTicket\Contracts\Permissions\PermissionProvider;
 use LaraTicket\Exceptions\NoPermissionsException;
 
-class ChecksPermissions implements PermissionProvider {
+class ChecksPermissions implements PermissionProvider
+{
 
     /**
      * @var AuthManager
@@ -32,12 +35,10 @@ class ChecksPermissions implements PermissionProvider {
      */
     public function can($permissible, $permission)
     {
-        if ( ! $permissible )
-        {
+        if ( ! $permissible) {
             return false;
         }
-        if ( ! in_array(HasPermissionsContract::class, class_implements($permissible)) )
-        {
+        if ( ! in_array(HasPermissionsContract::class, class_implements($permissible))) {
             return false;
         }
 
@@ -53,8 +54,7 @@ class ChecksPermissions implements PermissionProvider {
      */
     public function check($permission)
     {
-        if ( ! $this->can($this->auth->user(), $permission) )
-        {
+        if ( ! $this->can($this->auth->user(), $permission)) {
             throw new NoPermissionsException($permission);
         }
     }

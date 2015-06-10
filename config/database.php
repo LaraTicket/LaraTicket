@@ -14,7 +14,6 @@ return [
     */
 
     'fetch'       => PDO::FETCH_CLASS,
-
     /*
     |--------------------------------------------------------------------------
     | Default Database Connection Name
@@ -27,7 +26,6 @@ return [
     */
 
     'default'     => 'mysql',
-
     /*
     |--------------------------------------------------------------------------
     | Database Connections
@@ -51,7 +49,6 @@ return [
             'database' => storage_path() . '/database.sqlite',
             'prefix'   => '',
         ],
-
         'mysql'  => [
             'driver'    => 'mysql',
             'host'      => env('DB_HOST', 'localhost'),
@@ -63,7 +60,6 @@ return [
             'prefix'    => '',
             'strict'    => false,
         ],
-
         'pgsql'  => [
             'driver'   => 'pgsql',
             'host'     => env('DB_HOST', 'localhost'),
@@ -74,7 +70,6 @@ return [
             'prefix'   => '',
             'schema'   => 'public',
         ],
-
         'sqlsrv' => [
             'driver'   => 'sqlsrv',
             'host'     => env('DB_HOST', 'localhost'),
@@ -85,7 +80,6 @@ return [
         ],
 
     ],
-
     /*
     |--------------------------------------------------------------------------
     | Migration Repository Table
@@ -98,7 +92,6 @@ return [
     */
 
     'migrations'  => 'migrations',
-
     /*
     |--------------------------------------------------------------------------
     | Redis Databases
@@ -113,7 +106,6 @@ return [
     'redis'       => [
 
         'cluster' => false,
-
         'default' => [
             'host'     => '127.0.0.1',
             'port'     => 6379,

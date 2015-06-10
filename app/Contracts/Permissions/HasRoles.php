@@ -1,7 +1,9 @@
-<?php namespace LaraTicket\Contracts\Permissions;
+<?php
 
-interface HasRoles {
+namespace LaraTicket\Contracts\Permissions;
+
+interface HasRoles
+{
 
     public function getRoles();
-
 }

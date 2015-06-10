@@ -1,8 +1,11 @@
-<?php namespace LaraTicket\Http;
+<?php
+
+namespace LaraTicket\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
-class Kernel extends HttpKernel {
+class Kernel extends HttpKernel
+{
 
     /**
      * The application's global HTTP middleware stack.
@@ -24,9 +27,8 @@ class Kernel extends HttpKernel {
      * @var array
      */
     protected $routeMiddleware = [
-        'auth' => 'LaraTicket\Http\Middleware\Authenticate',
+        'auth'       => 'LaraTicket\Http\Middleware\Authenticate',
         'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-        'guest' => 'LaraTicket\Http\Middleware\RedirectIfAuthenticated',
+        'guest'      => 'LaraTicket\Http\Middleware\RedirectIfAuthenticated',
     ];
-
 }

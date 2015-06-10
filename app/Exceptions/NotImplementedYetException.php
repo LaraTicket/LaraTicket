@@ -1,6 +1,9 @@
-<?php namespace LaraTicket\Exceptions;
+<?php
 
-class NotImplementedYetException extends \Exception {
+namespace LaraTicket\Exceptions;
+
+class NotImplementedYetException extends \Exception
+{
 
     /**
      * Construct a new instance of the exception
@@ -12,5 +15,4 @@ class NotImplementedYetException extends \Exception {
     {
         parent::__construct("{$feature} has not been implemented yet!", 501, $previous);
     }
-
 }

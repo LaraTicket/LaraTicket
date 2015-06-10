@@ -14,32 +14,28 @@ return [
     |
     */
 
-    'mailgun' => [
+    'mailgun'  => [
         'domain' => '',
         'secret' => '',
     ],
-
     'mandrill' => [
         'secret' => '',
     ],
-
-    'ses' => [
-        'key' => '',
+    'ses'      => [
+        'key'    => '',
         'secret' => '',
         'region' => 'us-east-1',
     ],
-
-    'stripe' => [
+    'stripe'   => [
         'model'  => 'User',
         'secret' => '',
     ],
-
-    'imap' => [
-        'host'  => 'imap.something',
+    'imap'     => [
+        'host'     => 'imap.something',
         'username' => '',
         'password' => '',
-        'port' => 993,
-        'flags' => ''
+        'port'     => 993,
+        'flags'    => ''
     ],
 
 ];

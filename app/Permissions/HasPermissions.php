@@ -1,10 +1,13 @@
-<?php namespace LaraTicket\Permissions;
+<?php
 
+namespace LaraTicket\Permissions;
+
+use Illuminate\Support\Collection;
 use LaraTicket\Contracts\Permissions\HasRoles as HasRolesContract;
 use LaraTicket\Exceptions\NotCompatibleClassException;
-use Illuminate\Support\Collection;
 
-trait HasPermissions {
+trait HasPermissions
+{
 
     /**
      * Get The permissions of this class.
@@ -14,13 +17,11 @@ trait HasPermissions {
      */
     public function getPermissions()
     {
-        if ( method_exists($this, 'permissions') )
-        {
+        if (method_exists($this, 'permissions')) {
             return $this->permissions()->get();
         }
 
-        if ( ! in_array(HasRolesContract::class, class_implements($this)) )
-        {
+        if ( ! in_array(HasRolesContract::class, class_implements($this))) {
             throw new NotCompatibleClassException('getRoles');
         }
 
@@ -36,8 +37,7 @@ trait HasPermissions {
     {
         $perms = new Collection();
 
-        foreach ($this->getRoles() as $role)
-        {
+        foreach ($this->getRoles() as $role) {
             $perms[] = $role->getPermissions()->all();
         }
         $perms = $perms->flatten()->keyBy('node');

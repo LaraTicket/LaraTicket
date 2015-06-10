@@ -1,6 +1,9 @@
-<?php namespace LaraTicket\Exceptions;
+<?php
 
-class NotCompatibleClassException extends \Exception {
+namespace LaraTicket\Exceptions;
+
+class NotCompatibleClassException extends \Exception
+{
 
     /**
      * Construct a new instance of the exception

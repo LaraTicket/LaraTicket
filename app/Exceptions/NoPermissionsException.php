@@ -1,6 +1,9 @@
-<?php namespace LaraTicket\Exceptions;
+<?php
 
-class NoPermissionsException extends \Exception {
+namespace LaraTicket\Exceptions;
+
+class NoPermissionsException extends \Exception
+{
 
     /**
      * Construct a new instance of the exception

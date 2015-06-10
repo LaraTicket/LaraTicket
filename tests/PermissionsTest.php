@@ -2,7 +2,8 @@
 
 use Mockery as m;
 
-class PermissionsTest extends TestCase {
+class PermissionsTest extends TestCase
+{
 
     /**
      * @test

@@ -1,7 +1,9 @@
-<?php namespace LaraTicket\Events;
+<?php
 
-abstract class Event {
+namespace LaraTicket\Events;
+
+abstract class Event
+{
 
     //
-
 }

@@ -1,14 +1,14 @@
-<?php namespace LaraTicket\Http\Controllers\Admin;
+<?php
 
-use Illuminate\Support\Facades\Hash;
+namespace LaraTicket\Http\Controllers\Admin;
+
 use LaraTicket\Contracts\Permissions\PermissionProvider;
-use LaraTicket\Http\Requests;
 use LaraTicket\Http\Controllers\Controller;
-
-use Illuminate\Http\Request;
+use LaraTicket\Http\Requests;
 use LaraTicket\User;
 
-class DashboardController extends Controller {
+class DashboardController extends Controller
+{
 
     /**
      * @var PermissionProvider
@@ -28,8 +28,7 @@ class DashboardController extends Controller {
     public function index()
     {
         $user = User::first();
-        if ( ! $user )
-        {
+        if ( ! $user) {
             $user = User::create([
                 'email'    => 'test@local',
                 'password' => bcrypt('test')
@@ -40,5 +39,4 @@ class DashboardController extends Controller {
 
         return view('admin.dashboard');
     }
-
 }

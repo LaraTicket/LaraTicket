@@ -1,8 +1,11 @@
-<?php namespace LaraTicket\Providers;
+<?php
+
+namespace LaraTicket\Providers;
 
 use Illuminate\Support\ServiceProvider;
 
-class AppServiceProvider extends ServiceProvider {
+class AppServiceProvider extends ServiceProvider
+{
 
     /**
      * Bootstrap any application services.
@@ -13,7 +16,6 @@ class AppServiceProvider extends ServiceProvider {
     {
         //
     }
-
 
     /**
      * Register any application services.
@@ -28,11 +30,9 @@ class AppServiceProvider extends ServiceProvider {
     {
         $this->app->bind('Illuminate\Contracts\Auth\Registrar', 'LaraTicket\Services\Registrar');
 
-        if ($this->app->environment() == 'local')
-        {
+        if ($this->app->environment() == 'local') {
             $this->app->register('Laracasts\Generators\GeneratorsServiceProvider');
             $this->app->register('Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider');
         }
     }
-
 }

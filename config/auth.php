@@ -15,8 +15,7 @@ return [
     |
     */
 
-    'driver' => 'eloquent',
-
+    'driver'   => 'eloquent',
     /*
     |--------------------------------------------------------------------------
     | Authentication Model
@@ -28,8 +27,7 @@ return [
     |
     */
 
-    'model' => 'LaraTicket\User',
-
+    'model'    => 'LaraTicket\User',
     /*
     |--------------------------------------------------------------------------
     | Authentication Table
@@ -41,8 +39,7 @@ return [
     |
     */
 
-    'table' => 'users',
-
+    'table'    => 'users',
     /*
     |--------------------------------------------------------------------------
     | Password Reset Settings
@@ -59,8 +56,8 @@ return [
     */
 
     'password' => [
-        'email' => 'emails.password',
-        'table' => 'password_resets',
+        'email'  => 'emails.password',
+        'table'  => 'password_resets',
         'expire' => 60,
     ],
 

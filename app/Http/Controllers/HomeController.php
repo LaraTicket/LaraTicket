@@ -1,6 +1,9 @@
-<?php namespace LaraTicket\Http\Controllers;
+<?php
 
-class HomeController extends Controller {
+namespace LaraTicket\Http\Controllers;
+
+class HomeController extends Controller
+{
 
     /**
      * Show the application dashboard to the user.
@@ -11,5 +14,4 @@ class HomeController extends Controller {
     {
         return view('home');
     }
-
 }

@@ -1,9 +1,12 @@
-<?php namespace LaraTicket\Http\Middleware;
+<?php
+
+namespace LaraTicket\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Auth\Guard;
 
-class Authenticate {
+class Authenticate
+{
 
     /**
      * The Guard implementation.
@@ -11,7 +14,6 @@ class Authenticate {
      * @var Guard
      */
     protected $auth;
-
 
     /**
      * Create a new filter instance.
@@ -23,7 +25,6 @@ class Authenticate {
         $this->auth = $auth;
     }
 
-
     /**
      * Handle an incoming request.
      *
@@ -34,19 +35,14 @@ class Authenticate {
      */
     public function handle($request, Closure $next)
     {
-        if ( $this->auth->guest() )
-        {
-            if ( $request->ajax() )
-            {
+        if ($this->auth->guest()) {
+            if ($request->ajax()) {
                 return response('Unauthorized.', 401);
-            }
-            else
-            {
+            } else {
                 return redirect()->guest('auth/login');
             }
         }
 
         return $next($request);
     }
-
 }

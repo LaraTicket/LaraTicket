@@ -1,16 +1,19 @@
-<?php namespace LaraTicket;
+<?php
+
+namespace LaraTicket;
 
 use Illuminate\Auth\Authenticatable;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Auth\Passwords\CanResetPassword;
 use Illuminate\Contracts\Auth\Authenticatable as AuthenticatableContract;
 use Illuminate\Contracts\Auth\CanResetPassword as CanResetPasswordContract;
+use Illuminate\Database\Eloquent\Model;
 use LaraTicket\Contracts\Permissions\HasPermissions as HasPermissionsContract;
 use LaraTicket\Contracts\Permissions\HasRoles as HasRolesContract;
 use LaraTicket\Permissions\HasPermissions;
 use LaraTicket\Permissions\HasRoles;
 
-class User extends Model implements AuthenticatableContract, CanResetPasswordContract, HasPermissionsContract, HasRolesContract {
+class User extends Model implements AuthenticatableContract, CanResetPasswordContract, HasPermissionsContract, HasRolesContract
+{
 
     use Authenticatable, CanResetPassword, HasRoles, HasPermissions;
 
@@ -47,5 +50,4 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     {
         return $this->belongsToMany(Role::class);
     }
-
 }

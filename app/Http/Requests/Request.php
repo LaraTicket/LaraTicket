@@ -1,9 +1,11 @@
-<?php namespace LaraTicket\Http\Requests;
+<?php
+
+namespace LaraTicket\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-abstract class Request extends FormRequest {
+abstract class Request extends FormRequest
+{
 
     //
-
 }

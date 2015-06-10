@@ -1,9 +1,10 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use \LaraTicket\TicketStatus;
+use LaraTicket\TicketStatus;
 
-class AddDefaultTicketStatusesTableSeeder extends Seeder {
+class AddDefaultTicketStatusesTableSeeder extends Seeder
+{
 
     /**
      * TicketStatus for internal use
@@ -11,7 +12,6 @@ class AddDefaultTicketStatusesTableSeeder extends Seeder {
      * @var \LaraTicket\TicketStatus
      */
     private $status;
-
 
     /**
      * Construct the seeder
@@ -24,7 +24,6 @@ class AddDefaultTicketStatusesTableSeeder extends Seeder {
         $this->status = $status;
     }
 
-
     /**
      * Run the seeder
      */
@@ -35,10 +34,8 @@ class AddDefaultTicketStatusesTableSeeder extends Seeder {
             'Waiting Response',
             'Closed'
         ];
-        foreach ($statuses as $status)
-        {
+        foreach ($statuses as $status) {
             $this->status->create([ 'name' => $status ]);
         }
     }
-
 }

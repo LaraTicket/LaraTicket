@@ -1,8 +1,11 @@
-<?php namespace LaraTicket\Permissions;
+<?php
+
+namespace LaraTicket\Permissions;
 
 use LaraTicket\Exceptions\NotCompatibleClassException;
 
-trait HasRoles {
+trait HasRoles
+{
 
     /**
      * Get the roles of this object.
@@ -12,12 +15,10 @@ trait HasRoles {
      */
     public function getRoles()
     {
-        if ( ! method_exists($this, 'roles') )
-        {
+        if ( ! method_exists($this, 'roles')) {
             throw new NotCompatibleClassException('roles');
         }
 
         return $this->roles()->get();
     }
-
 }

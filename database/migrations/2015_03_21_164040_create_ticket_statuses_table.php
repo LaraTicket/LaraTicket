@@ -1,9 +1,10 @@
-<?php
+í<?php
 
-use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
 
-class CreateTicketStatusesTable extends Migration {
+class CreateTicketStatusesTable extends Migration
+{
 
     /**
      * Run the migrations.
@@ -12,8 +13,7 @@ class CreateTicketStatusesTable extends Migration {
      */
     public function up()
     {
-        Schema::create('ticket_statuses', function (Blueprint $table)
-        {
+        Schema::create('ticket_statuses', function (Blueprint $table) {
             $table->increments('id');
 
             $table->string('name');
@@ -31,5 +31,4 @@ class CreateTicketStatusesTable extends Migration {
     {
         Schema::drop('ticket_statuses');
     }
-
 }
