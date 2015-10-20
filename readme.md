@@ -4,6 +4,10 @@
 
 LaraTicket is a Ticket/Support software written in Laravel. It's purpose is to provide easy to use (both users /agents) system, that can easily be customized.
 
+## Development
+
+LaraTicket is currently on hold due to limited time. It shouldn't be considered dead, since I plan to continue working on it when I have time!
+
 ## Official Documentation
 
 No documentation yet.
